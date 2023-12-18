@@ -2,10 +2,11 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import ChekoutContextProvider from "../../src/context/ChekoutContext";
 
 export default function CheckoutStack() {
   return (
-    <>
+    <ChekoutContextProvider>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -29,6 +30,6 @@ export default function CheckoutStack() {
           options={{ title: "Payment information" }}
         />
       </Stack>
-    </>
+    </ChekoutContextProvider>
   );
 }

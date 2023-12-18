@@ -13,6 +13,7 @@ import { Controller, useForm } from "react-hook-form";
 import { DeliveryInfo, DeliverySchema } from "../../src/schema/checkout.shema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ControllerInput from "../../src/component/Controllerinput";
+import { useChekoutContext } from "../../src/context/ChekoutContext";
 
 export default function Delivery() {
   const {
@@ -25,10 +26,12 @@ export default function Delivery() {
       shipping: "free",
     },
   });
+  const { setDelivery } = useChekoutContext();
   const router = useRouter();
   const theme = useTheme();
   // const [shipping, setShipping] = useState("free");
-  const nextPage = (data) => {
+  const nextPage = (data: DeliveryInfo) => {
+    setDelivery(data);
     //Submit
     router.replace("/checkout/payment");
   };
