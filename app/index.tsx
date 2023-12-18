@@ -3,15 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
   return (
-    <Redirect href={"/checkout"} />
-    // <View style={styles.container}>
-    //   <View style={styles.main}>
-    //     <Text style={styles.title}>Hello World!!!!!!!!!!!!!</Text>
-    //     <Link href={"/checkout"} style={styles.subtitle}>
-    //       Checkout
-    //     </Link>
-    //   </View>
-    // </View>
+    // <Redirect href={"/checkout"} />
+    <View style={styles.container}>
+      <View style={styles.main}>
+        <Text style={styles.title}>Hello World!!!!!!!!!!!!!</Text>
+        <Link href={"/checkout"} style={styles.subtitle}>
+          Checkout
+        </Link>
+      </View>
+    </View>
   );
 }
 

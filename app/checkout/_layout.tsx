@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 export default function CheckoutStack() {
   return (
     <>
-      {/* <StatusBar style="light" /> */}
+      <StatusBar style="light" />
       <Stack
         screenOptions={{
           contentStyle: { padding: 15, backgroundColor: "#f0fbe8", flex: 1 },
@@ -16,9 +16,10 @@ export default function CheckoutStack() {
         }}
       >
         <Stack.Screen
-          name="index"
+          name="personal"
           options={{ title: "Personal information" }}
         />
+
         <Stack.Screen
           name="delivery"
           options={{ title: "Delivery information" }}
